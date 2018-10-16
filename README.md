@@ -37,7 +37,7 @@ ___
 ### API
 
 ## ball-val
-```scheme
+```racket
 (define (ball-val color)
   (let ((ball color))
     (cond ((equal? 'W ball) 1)
@@ -52,7 +52,7 @@ ___
 ___
 
 ## count-balls
-```scheme
+```racket
 (define (count-balls color bucket)
   (count
    (keep (lambda (c) (equal? color c)) bucket)))
@@ -81,7 +81,7 @@ ___
 ___
 
 ## bucket-val
-```scheme
+```racket
 (define (bucket-val bucket)
   (let ((score 0))
     (apply + (map (lambda (c) (+ score (ball-val c))) bucket))))
@@ -94,7 +94,7 @@ ___
 ___
 
 ## judge
-```scheme
+```racket
 (define (judge bucket_1 bucket_2)
   (let ((score1 (bucket-val bucket_1) ))
     (let ((score2 (bucket-val bucket_2) ))
