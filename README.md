@@ -64,7 +64,7 @@ ___
 ___
 
 ## color-counts
-```scheme
+```ruby
 (define (color-counts bucket)
   (let ([R (count-balls 'R bucket)]
         [G (count-balls 'G bucket)]
