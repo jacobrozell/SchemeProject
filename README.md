@@ -36,7 +36,7 @@ ___
 
 ### API
 
-ball-val
+## ball-val
 ```scheme
 (define (ball-val color)
   (let ((ball color))
@@ -48,10 +48,10 @@ ball-val
 ```scheme
 (ball-val 'R)
 ```
-The procedure ball-val takes a color as an argument and returns how many points that color is worth.
+#### The procedure ball-val takes a color as an argument and returns how many points that color is worth.
 ___
 
-count-balls
+## count-balls
 ```scheme
 (define (count-balls color bucket)
   (count
@@ -60,10 +60,10 @@ count-balls
 ```scheme
 (count-balls 'R '(R B G R R R B W R W))
 ```
-The procedure count-balls takes a color and a bucket as an argument and returns the number of balls in the bucket with the given color.
+#### The procedure count-balls takes a color and a bucket as an argument and returns the number of balls in the bucket with the given color.
 ___
 
-color-counts
+## color-counts
 ```scheme
 (define (color-counts bucket)
   (let ([R (count-balls 'R bucket)]
@@ -75,12 +75,12 @@ color-counts
 ```scheme
 (color-counts '(R B G R R R B W R W))
 ```
-The procedure color-counts takes a bucket as an argument and returns a
+#### The procedure color-counts takes a bucket as an argument and returns a
 sentence containing the number of reds, the number of green, the number of blues, and
 the number of whites in the bucket.
 ___
 
-bucket-val
+## bucket-val
 ```scheme
 (define (bucket-val bucket)
   (let ((score 0))
@@ -89,11 +89,11 @@ bucket-val
 ```scheme
 (bucket-val '(R B G R R R B W R W))
 ```
-The procedure bucket-val takes a bucket as an argument and returns the total
+#### The procedure bucket-val takes a bucket as an argument and returns the total
 number of points that the bucket is worth.
 ___
 
-judge
+## judge
 ```scheme
 (define (judge bucket_1 bucket_2)
   (let ((score1 (bucket-val bucket_1) ))
@@ -105,7 +105,7 @@ judge
 ```scheme
 (judge '(R B G R R R B W R W) '(W R R R R G B B G W))
 ```
-The procedure judge takes two arguments bucket_1 and bucket_2 and returns
+#### The procedure judge takes two arguments bucket_1 and bucket_2 and returns
 which player won the game.
 ___
 
