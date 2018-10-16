@@ -76,8 +76,8 @@ ___
 (color-counts '(R B G R R R B W R W))
 ```
 #### The procedure color-counts takes a bucket as an argument and returns a
-sentence containing the number of reds, the number of green, the number of blues, and
-the number of whites in the bucket.
+#### sentence containing the number of reds, the number of green, the number of blues, and
+#### the number of whites in the bucket.
 ___
 
 ## bucket-val
@@ -90,7 +90,7 @@ ___
 (bucket-val '(R B G R R R B W R W))
 ```
 #### The procedure bucket-val takes a bucket as an argument and returns the total
-number of points that the bucket is worth.
+#### number of points that the bucket is worth.
 ___
 
 ## judge
@@ -106,7 +106,7 @@ ___
 (judge '(R B G R R R B W R W) '(W R R R R G B B G W))
 ```
 #### The procedure judge takes two arguments bucket_1 and bucket_2 and returns
-which player won the game.
+#### which player won the game.
 ___
 
 #### License
