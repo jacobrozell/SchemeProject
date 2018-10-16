@@ -36,7 +36,7 @@ ___
 
 ### API
 
-Ball-val
+ball-val
 ```scheme
 (define (ball-val color)
   (let ((ball color))
@@ -45,18 +45,25 @@ Ball-val
           ((equal? 'G ball) 15)
           ((equal? 'B ball) 20))))
 ```
+```scheme
+(ball-val 'R)
+```
+The procedure ball-val takes a color as an argument and returns how many points that color is worth.
+___
 
-Count-balls
-
+count-balls
 ```scheme
 (define (count-balls color bucket)
   (count
    (keep (lambda (c) (equal? color c)) bucket)))
-
 ```
+```scheme
+(count-balls 'R '(R B G R R R B W R W))
+```
+The procedure count-balls takes a color and a bucket as an argument and returns the number of balls in the bucket with the given color.
+___
 
-Color-counts
-
+color-counts
 ```scheme
 (define (color-counts bucket)
   (let ([R (count-balls 'R bucket)]
@@ -65,17 +72,28 @@ Color-counts
         [W (count-balls 'W bucket)])
     (display (list R G W B))))
 ```
-Bucket-val
+```scheme
+(color-counts '(R B G R R R B W R W))
+```
+The procedure color-counts takes a bucket as an argument and returns a
+sentence containing the number of reds, the number of green, the number of blues, and
+the number of whites in the bucket.
+___
 
+bucket-val
 ```scheme
 (define (bucket-val bucket)
   (let ((score 0))
     (apply + (map (lambda (c) (+ score (ball-val c))) bucket))))
-
 ```
+```scheme
+(bucket-val '(R B G R R R B W R W))
+```
+The procedure bucket-val takes a bucket as an argument and returns the total
+number of points that the bucket is worth.
+___
 
-Judge
-
+judge
 ```scheme
 (define (judge bucket_1 bucket_2)
   (let ((score1 (bucket-val bucket_1) ))
@@ -84,6 +102,11 @@ Judge
             ((> score2 score1) "Bucket 2, won!")
             ((equal? score1 score2) "It's a tie!")))))
 ```
+```scheme
+(judge '(R B G R R R B W R W) '(W R R R R G B B G W))
+```
+The procedure judge takes two arguments bucket_1 and bucket_2 and returns
+which player won the game.
 ___
 
 #### License
