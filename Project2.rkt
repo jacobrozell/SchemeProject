@@ -21,9 +21,7 @@
   (count
    (keep (lambda (c) (equal? color c)) bucket)))
 
-;; Color-counts ;;;;;;;;;;;;;;;;;;;LAST ONE;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Red / Green / Blues / Whites
+;; Color-counts 
 (define (color-counts bucket)
   (let ([R (count-balls 'R bucket)]
         [G (count-balls 'G bucket)]
@@ -73,10 +71,5 @@
 ;; Call color-counts for bucket 2
 (display "Color Counts for Bucket 2: ")
 (color-counts bucket2)
-
-
-
-
-
 
 
