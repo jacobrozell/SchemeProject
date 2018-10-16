@@ -2,33 +2,30 @@
 
 
 ### Quick start
-**Download [Dr. Racket] (https://download.racket-lang.org/)
+**Download [Dr. Racket](https://download.racket-lang.org/)
 
-> Clone/Download the solution then run `main.rb`
+**Open a new file.
+**Put the following line at the top of the file: 
 
-```bash
-
-# Download all files from canvas
-
-# For Ubuntu
-$ ruby main.rb
+```scheme
+#lang racket
+(require (planet dyoo/simply-scheme:1:2/simply-scheme) )
 
 ```
 
 # Table of Contents
-* [Short Answer](#short-answer)
+* [Summary](#summary)
+* [API](#API)
 
-#### Short Answer
+___
+
+#### Summary
 
 ___
 
 ### API
 
 
-___
-
-#### Program Time Complexity
-The program runs with O(NN^2) time complexity.
 ___
 
 #### License
