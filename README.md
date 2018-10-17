@@ -64,7 +64,7 @@ ___
 ___
 
 ## color-counts
-```racket
+```scheme
 (define (color-counts bucket)
   (let ([R (count-balls 'R bucket)]
         [G (count-balls 'G bucket)]
